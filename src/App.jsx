@@ -5,6 +5,8 @@ import GlobalContext from "./Context/GlobalContext";
 import CatalogSearch from "./Components/CatalogSearch/CatalogSearch";
 
 function App() {
+  const [movieList, setMovieList] = useState([]);
+
   return (
     <>
       <GlobalContext.Provider value="">
