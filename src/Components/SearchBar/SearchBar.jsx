@@ -2,7 +2,8 @@ function SearchBar() {
   return (
     <>
       <form>
-        <p>Form</p>
+        <input type="text" />
+        <button>Cerca per titolo</button>
       </form>
     </>
   );
