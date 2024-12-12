@@ -8,10 +8,10 @@ import axios from "axios";
 function App() {
   const [mediaList, setMediaList] = useState([]);
 
-  function fetchMedia() {
+  function fetchMedia(mediaTitle) {
     axios
       .get(
-        "https://api.themoviedb.org/3/search/tv?api_key=138655685094138af87852193ddccc85&query=scrubs"
+        `https://api.themoviedb.org/3/search/tv?api_key=138655685094138af87852193ddccc85&query=${mediaTitle}`
       )
       .then((res) => setMediaList(res.data.results));
   }
