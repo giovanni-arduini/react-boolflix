@@ -11,7 +11,7 @@ function CatalogSearch() {
       <SearchBar />
       <div>
         {mediaList.map((media) => {
-          return <p key={media.id}>{media.name}</p>;
+          return <p key={media.id}>{media.title}</p>;
         })}
       </div>
     </>
