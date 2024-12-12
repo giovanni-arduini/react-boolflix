@@ -13,7 +13,7 @@ function App() {
       .get(
         "https://api.themoviedb.org/3/search/tv?api_key=138655685094138af87852193ddccc85&query=scrubs"
       )
-      .then((res) => setMediaList(res.data.reults));
+      .then((res) => setMediaList(res.data.results));
   }
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <GlobalContext.Provider value="">
+      <GlobalContext.Provider value={{ fetchMedia, mediaList }}>
         <BrowserRouter>
           <Routes>
             <Route path="" Component={CatalogSearch}></Route>
