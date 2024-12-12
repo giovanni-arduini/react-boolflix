@@ -10,9 +10,10 @@ function CatalogSearch() {
     <>
       <SearchBar />
       <div>
-        {mediaList.map((media) => {
-          return <p key={media.id}>{media.title}</p>;
-        })}
+        {mediaList.length > 1 &&
+          mediaList.map((media) => {
+            return <p key={media.id}>{media.title}</p>;
+          })}
       </div>
     </>
   );

@@ -5,6 +5,8 @@ import GlobalContext from "./Context/GlobalContext";
 import CatalogSearch from "./Components/CatalogSearch/CatalogSearch";
 import axios from "axios";
 
+const BASE_API_URL = "https://api.themoviedb.org/3/search/";
+
 function App() {
   const [mediaList, setMediaList] = useState([]);
 
@@ -17,7 +19,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetchMedia();
+    fetchMedia;
   }, []);
 
   return (
