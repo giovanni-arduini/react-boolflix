@@ -12,7 +12,14 @@ function CatalogSearch() {
       <div>
         {mediaList.length > 1 &&
           mediaList.map((media) => {
-            return <p key={media.id}>{media.title}</p>;
+            return (
+              <div key={media.id}>
+                <h3>{media.title}</h3>
+                <p>{media.original_title}</p>
+                <p>{media.original_language}</p>
+                <p>{media.vote_average}</p>
+              </div>
+            );
           })}
       </div>
     </>
