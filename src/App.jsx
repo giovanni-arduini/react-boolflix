@@ -4,6 +4,9 @@ import "./App.css";
 import GlobalContext from "./Context/GlobalContext";
 import CatalogSearch from "./Components/CatalogSearch/CatalogSearch";
 import axios from "axios";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import ItemList from "./Components/ItemList/ItemList";
 
 const BASE_API_URL = "https://api.themoviedb.org/3/search/";
 
@@ -33,7 +36,7 @@ function App() {
       <GlobalContext.Provider value={{ fetchMedia, mediaList }}>
         <BrowserRouter>
           <Routes>
-            <Route path="" Component={CatalogSearch}></Route>
+            <Route path="" Component={(Main, Header, ItemList)}></Route>
           </Routes>
         </BrowserRouter>
       </GlobalContext.Provider>
