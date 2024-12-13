@@ -11,11 +11,17 @@ function App() {
   const [mediaList, setMediaList] = useState([]);
 
   function fetchMedia(mediaTitle) {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=138655685094138af87852193ddccc85&query=${mediaTitle}`
-      )
-      .then((res) => setMediaList(res.data.results));
+    const ulrs = [
+      `https://api.themoviedb.org/3/search/movie?api_key=138655685094138af87852193ddccc85&query=${mediaTitle}`,
+      ,
+      `https://api.themoviedb.org/3/search/tv?api_key=138655685094138af87852193ddccc85&query=${mediaTitle}`,
+    ];
+    ulrs.map((url) =>
+      axios
+        .get(url)
+
+        .then((res) => setMediaList(res.data.results))
+    );
   }
 
   useEffect(() => {
