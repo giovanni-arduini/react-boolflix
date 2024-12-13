@@ -2,6 +2,7 @@
 
 import flagsMap from "../../assets/flags";
 import Stars from "../Stars/Stars";
+import style from "./Card.module.css";
 
 function Card({ item }) {
   const {
@@ -19,14 +20,18 @@ function Card({ item }) {
   const posterSizes = {
     sm: "w92",
     md: "w185",
-    lg: "500",
+    lg: "w500",
   };
 
   const stars = Math.ceil(parseInt(+vote_average) / 2);
 
   return (
-    <div>
-      <img src={`${BASE_POSTER_URI}${posterSizes.sm}${poster_path}`} alt="" />
+    <div className={style.card}>
+      <img
+        className={style.thumbnail}
+        src={`${BASE_POSTER_URI}${posterSizes.lg}${poster_path}`}
+        alt=""
+      />
       <h3>{title || name}</h3>
       <p>{original_title || original_name}</p>
 

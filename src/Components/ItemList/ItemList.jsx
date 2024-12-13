@@ -3,6 +3,7 @@
 // Metteremo le card popolate dai dati
 
 import Card from "../Card/card";
+import style from "./ItemList.module.css";
 
 function ItemList({ items, title }) {
   return (
@@ -11,9 +12,9 @@ function ItemList({ items, title }) {
         <h2>{title}</h2>
       </div>
       <div className="container">
-        <ul className="grid">
+        <ul className="row">
           {items.map((item) => (
-            <li key={item.id}>
+            <li className="col-4" key={item.id}>
               <Card item={item} />
             </li>
           ))}
