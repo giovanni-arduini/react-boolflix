@@ -28,11 +28,19 @@ function Card({ item }) {
 
   return (
     <div className={style.card}>
-      <img
-        className={style.thumbnail}
-        src={`${BASE_POSTER_URI}${posterSizes.lg}${poster_path}`}
-        alt=""
-      />
+      {poster_path ? (
+        <img
+          className={style.thumbnail}
+          src={`${BASE_POSTER_URI}${posterSizes.lg}${poster_path}`}
+          alt=""
+        />
+      ) : (
+        <img
+          className={style.thumbnail}
+          src="src/assets/—Pngtree—movie clapper film_2497117.png"
+          alt=""
+        />
+      )}
       <div className={style.cardBody}>
         <p>
           <strong>Titolo: </strong>
