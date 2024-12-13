@@ -5,7 +5,7 @@ import enFlag from "./en.png";
 const flagsMap = {
   it: itFlag,
   en: enFlag,
-  jp: jpFlag,
+  ja: jpFlag,
 };
 
 export default flagsMap;
