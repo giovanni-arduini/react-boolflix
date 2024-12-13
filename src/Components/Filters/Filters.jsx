@@ -18,7 +18,7 @@ export default function Filters() {
       <label htmlFor="query">Cerca</label>
       <input
         onChange={onChange}
-        valut={query}
+        value={query}
         type="text"
         placeholder="Cerca..."
         name="query"

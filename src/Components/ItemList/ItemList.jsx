@@ -18,7 +18,6 @@ function ItemList({ items, title }) {
             </li>
           ))}
         </ul>
-        ;
       </div>
     </section>
   );

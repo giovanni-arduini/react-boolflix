@@ -1,6 +1,7 @@
 // qui stamperemo effettivamente i risultati
 
 import flagsMap from "../../assets/flags";
+import Stars from "../Stars/Stars";
 
 function Card({ item }) {
   const {
@@ -21,6 +22,8 @@ function Card({ item }) {
     lg: "500",
   };
 
+  const stars = Math.ceil(parseInt(+vote_average) / 2);
+
   return (
     <div>
       <img src={`${BASE_POSTER_URI}${posterSizes.sm}${poster_path}`} alt="" />
@@ -37,7 +40,7 @@ function Card({ item }) {
         original_language
       )}
       <p>{vote_average}</p>
-      <p>{Math.ceil(parseInt(+vote_average) / 2)}</p>
+      <Stars stars={stars} />
     </div>
   );
 }
