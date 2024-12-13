@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faEmptyStar } from "@fortawesome/free-regular-svg-icons";
+
 export default function Stars({ stars }) {
   const emptyStars = 5 - stars;
   return (
@@ -8,7 +12,7 @@ export default function Stars({ stars }) {
           .fill("")
           .map((_, index) => (
             <div key={index}>
-              <p>{"Stella piena"}</p>
+              <FontAwesomeIcon icon={faStar} />
             </div>
           ))}
         {emptyStars &&
@@ -16,7 +20,7 @@ export default function Stars({ stars }) {
             .fill("")
             .map((_, index) => (
               <div key={index}>
-                <p>{"Stella vuota"}</p>
+                <FontAwesomeIcon icon={faEmptyStar} />
               </div>
             ))}
       </div>
