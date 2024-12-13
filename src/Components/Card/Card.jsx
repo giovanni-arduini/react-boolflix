@@ -32,20 +32,22 @@ function Card({ item }) {
         src={`${BASE_POSTER_URI}${posterSizes.lg}${poster_path}`}
         alt=""
       />
-      <h3>{title || name}</h3>
-      <p>{original_title || original_name}</p>
+      <div className={style.cardBody}>
+        <p>{title || name}</p>
+        <p>{original_title || original_name}</p>
 
-      {flagsMap[original_language] ? (
-        <img
-          src={flagsMap[original_language]}
-          style={{ maxWidth: "1.5rem" }}
-          alt=""
-        />
-      ) : (
-        original_language
-      )}
-      <p>{vote_average}</p>
-      <Stars stars={stars} />
+        {flagsMap[original_language] ? (
+          <img
+            src={flagsMap[original_language]}
+            style={{ maxWidth: "1.5rem" }}
+            alt=""
+          />
+        ) : (
+          original_language
+        )}
+        <p>{vote_average}</p>
+        <Stars stars={stars} />
+      </div>
     </div>
   );
 }

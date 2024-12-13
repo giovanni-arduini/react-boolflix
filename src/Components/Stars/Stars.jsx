@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faEmptyStar } from "@fortawesome/free-regular-svg-icons";
+import style from "./Stars.module.css";
 
 export default function Stars({ stars }) {
   const emptyStars = 5 - stars;
   return (
     <>
-      <div>
+      <div className={style.stars}>
         {Array(stars)
           .fill("")
           .map((_, index) => (

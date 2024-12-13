@@ -1,4 +1,5 @@
 .card {
+  font-family: "Noto Sans";
   margin-bottom: 2rem;
   position: relative;
   height: 15rem;
@@ -15,4 +16,23 @@
   width: 100%;
 
   display: block;
+}
+
+.thumbnail:hover {
+  z-index: -1;
+}
+
+.cardBody {
+  z-index: 1;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 1rem;
+  border: 1px solid white;
+}
+
+.stars {
+  display: flex;
 }
