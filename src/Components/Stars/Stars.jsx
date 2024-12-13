@@ -7,7 +7,6 @@ export default function Stars({ stars }) {
   return (
     <>
       <div>
-        <p>stars: {stars}</p>
         {Array(stars)
           .fill("")
           .map((_, index) => (

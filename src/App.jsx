@@ -20,12 +20,6 @@ function App() {
   const [query, setQuery] = useState([]);
 
   function fetchMedia(mediaTitle) {
-    // const ulrs = [
-    //   `https://api.themoviedb.org/3/search/movie?api_key=138655685094138af87852193ddccc85&query=${mediaTitle}`,
-    //   ,
-    //   `https://api.themoviedb.org/3/search/tv?api_key=138655685094138af87852193ddccc85&query=${mediaTitle}`,
-    // ];
-    // ulrs.map((url) =>
     axios
       .get(`${BASE_API_URL}movie`, {
         params: {
@@ -57,7 +51,7 @@ function App() {
             original_title: item.original_name,
           };
         });
-        setSeries(res.data.results);
+        setSeries(mappedSeries);
       })
 
       .catch((err) => {

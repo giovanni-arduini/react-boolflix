@@ -1,0 +1,16 @@
+header {
+  background-color: black;
+  padding: 2rem;
+}
+
+.logo {
+  color: red;
+  font-size: larger;
+  font-family: "Noto Sans";
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

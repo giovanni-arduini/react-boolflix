@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import GlobalContext from "../../Context/GlobalContext";
+import style from "./Filters.module.css";
 
 export default function Filters() {
   const { query, setQuery, fetchMedia } = useContext(GlobalContext);
@@ -15,7 +16,7 @@ export default function Filters() {
 
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor="query">Cerca</label>
+      {/* <label htmlFor="query">Cerca</label> */}
       <input
         onChange={onChange}
         value={query}
@@ -25,7 +26,7 @@ export default function Filters() {
         id="query"
       />
 
-      <button>Cerca!</button>
+      {/* <button>Cerca!</button> */}
     </form>
   );
 }
