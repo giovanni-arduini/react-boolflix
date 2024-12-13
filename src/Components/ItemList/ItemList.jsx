@@ -4,7 +4,7 @@
 
 import Card from "../Card/card";
 
-function ItemList(items = [], title) {
+function ItemList({ items, title }) {
   return (
     <section>
       <div className="container">
@@ -13,7 +13,7 @@ function ItemList(items = [], title) {
       <div className="container">
         <ul className="grid">
           {items.map((item) => (
-            <li kay={item.id}>
+            <li key={item.id}>
               <Card item={item} />
             </li>
           ))}

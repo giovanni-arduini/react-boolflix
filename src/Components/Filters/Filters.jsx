@@ -2,14 +2,19 @@ import { useContext } from "react";
 import GlobalContext from "../../Context/GlobalContext";
 
 export default function Filters() {
-  const { query, setQuery } = useContext(GlobalContext);
+  const { query, setQuery, fetchMedia } = useContext(GlobalContext);
 
   function onChange(e) {
     setQuery(e.target.value);
   }
 
+  function onSubmit(e) {
+    e.preventDefault();
+    fetchMedia();
+  }
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <label htmlFor="query">Cerca</label>
       <input
         onChange={onChange}
