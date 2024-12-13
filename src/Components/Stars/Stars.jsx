@@ -19,7 +19,7 @@ export default function Stars({ stars }) {
           Array(emptyStars)
             .fill("")
             .map((_, index) => (
-              <div key={index}>
+              <div className={style.star} key={index}>
                 <FontAwesomeIcon icon={faEmptyStar} />
               </div>
             ))}
