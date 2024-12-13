@@ -37,7 +37,7 @@ function Card({ item }) {
         original_language
       )}
       <p>{vote_average}</p>
-      <p>{parseInt(+vote_average) / 2}</p>
+      <p>{Math.ceil(parseInt(+vote_average) / 2)}</p>
     </div>
   );
 }
