@@ -13,6 +13,7 @@ function Card({ item }) {
     original_language,
     vote_average,
     poster_path,
+    overview,
   } = item;
 
   const BASE_POSTER_URI = "https://image.tmdb.org/t/p/";
@@ -33,8 +34,14 @@ function Card({ item }) {
         alt=""
       />
       <div className={style.cardBody}>
-        <p>{title || name}</p>
-        <p>{original_title || original_name}</p>
+        <p>
+          <strong>Titolo: </strong>
+          {title || name}
+        </p>
+        <p>
+          <strong>Titolo originale: </strong>
+          {original_title || original_name}
+        </p>
 
         {flagsMap[original_language] ? (
           <img
@@ -45,8 +52,11 @@ function Card({ item }) {
         ) : (
           original_language
         )}
-        <p>{vote_average}</p>
+        <p>
+          <strong>Voto: </strong>
+        </p>
         <Stars stars={stars} />
+        <p>{overview}</p>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
   font-family: "Noto Sans";
   margin-bottom: 2rem;
   position: relative;
-  height: 15rem;
+
   aspect-ratio: 4/5;
   /* margin: 0 1rem; */
 }
@@ -14,16 +14,17 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
-
+  opacity: 1;
   display: block;
 }
 
-.thumbnail:hover {
-  z-index: -1;
+.card:hover {
+  .thumbnail {
+    display: none;
+  }
 }
 
 .cardBody {
-  z-index: 1;
   height: 100%;
   background-color: black;
   display: flex;
@@ -31,6 +32,10 @@
   color: white;
   padding: 1rem;
   border: 1px solid white;
+  overflow: auto;
+  * {
+    margin-bottom: 0.6rem;
+  }
 }
 
 .stars {
