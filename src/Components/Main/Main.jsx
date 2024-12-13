@@ -3,6 +3,7 @@
 import { useContext } from "react";
 import ItemList from "../ItemList/ItemList";
 import GlobalContext from "../../Context/GlobalContext";
+import style from "./Main.module.css";
 
 function Main() {
   const { movies, series } = useContext(GlobalContext);
