@@ -28,7 +28,11 @@ function Card({ item }) {
       <p>{original_title || original_name}</p>
 
       {flagsMap[original_language] ? (
-        <img src={flagsMap[original_language]} alt="" />
+        <img
+          src={flagsMap[original_language]}
+          style={{ maxWidth: "1.5rem" }}
+          alt=""
+        />
       ) : (
         original_language
       )}

@@ -78,11 +78,6 @@ function App() {
       >
         <Header />
         <Main />
-        {/* <BrowserRouter>
-          <Routes>
-            <Route path="" Component={(Main, Header, ItemList)}></Route>
-          </Routes>
-        </BrowserRouter> */}
       </GlobalContext.Provider>
     </>
   );
