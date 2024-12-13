@@ -9,7 +9,7 @@ function ItemList({ items, title }) {
   return (
     <section>
       <div className="container">
-        <h2>{title}</h2>
+        <h3 className={style.section_title}>{title}</h3>
       </div>
       <div className="container">
         <ul className="row">
